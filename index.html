@@ -1,92 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Thrifty Neon</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
+      background-color: #fff9f5;
+      color: #3e1f1f;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f4ef;
-      color: #5a2a1e;
+      padding: 0;
       text-align: center;
-      padding: 2rem;
     }
-    h1 {
-      color: #992828;
-      margin-bottom: 0.3rem;
-    }
-    p {
-      margin: 0.5rem 0;
-    }
-    .icon {
-      margin-right: 0.4rem;
-    }
-    a {
-      color: #7d2d2d;
-      text-decoration: none;
+
+    .announcement {
+      background-color: #a83232;
+      color: white;
+      padding: 10px;
       font-weight: bold;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    a:hover {
-      text-decoration: underline;
+
+    header {
+      padding: 30px;
+      background-color: #fcefe3;
     }
-    .btn {
-      background-color: #992828;
-      color: #fff;
-      padding: 0.7rem 1.5rem;
-      border: none;
-      border-radius: 8px;
-      margin: 1rem 0.5rem;
-      cursor: pointer;
-      font-size: 1rem;
+
+    header h1 {
+      color: #a83232;
+      font-size: 2.2em;
     }
-    .btn:hover {
-      background-color: #7a1f1f;
+
+    .tagline {
+      font-size: 1.2em;
+      color: #5a2a2a;
     }
-    .contact-links {
-      margin-top: 1rem;
-    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 20px;
+      padding: 20px;
     }
+
     .gallery img {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      .btn {
-        padding: 0.5rem 1rem;
-      }
+
+    .reviews {
+      background-color: #fff3ec;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .reviews p {
+      margin: 10px 0;
+      font-style: italic;
+    }
+
+    .contact, .join {
+      padding: 20px;
+      background-color: #f8f0e9;
+      margin: 20px auto;
+      width: 80%;
+      max-width: 500px;
+      border-radius: 10px;
+    }
+
+    input, textarea, select {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #a83232;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .lang-toggle {
+      margin: 20px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      background-color: #f4e2d6;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to Thrifty Neon!</h1>
-  <p><em>Kerala’s favorite thrift and imported surplus store 👗</em></p>
+  <div class="announcement">🎉 New Arrivals Now Live! Shop Now</div>
 
-  <p>📍 Palace Rd, Mankada, Kerala – 679324</p>
-  <p>📞 <a href="tel:+919037494792">+91 90374 94792</a></p>
-  <p>📸 Instagram: <a href="https://www.instagram.com/thrifty_neon" target="_blank">@thrifty_neon</a></p>
-
-  <div class="contact-links">
-    <a href="tel:+919037494792"><button class="btn">Call Now</button></a>
-    <a href="https://wa.me/919037494792" target="_blank"><button class="btn">WhatsApp</button></a>
-    <a href="https://www.instagram.com/thrifty_neon" target="_blank"><button class="btn">Visit Instagram</button></a>
-  </div>
+  <header>
+    <h1>Thrifty Neon</h1>
+    <p class="tagline">Kerala’s favorite thrift & imported ladies' store 💄👜</p>
+  </header>
 
   <div class="gallery">
-    <img src="https://source.unsplash.com/featured/?fashion" alt="Thrift Product 1">
-    <img src="https://source.unsplash.com/featured/?clothing" alt="Thrift Product 2">
-    <img src="https://source.unsplash.com/featured/?vintage" alt="Thrift Product 3">
+    <img src="https://via.placeholder.com/150" alt="Dress 1">
+    <img src="https://via.placeholder.com/150" alt="Bag 2">
+    <img src="https://via.placeholder.com/150" alt="Jewelry 3">
+    <img src="https://via.placeholder.com/150" alt="Heels 4">
   </div>
+
+  <div class="reviews">
+    <h2>💬 Customer Reviews</h2>
+    <p>“Best quality items at great price!” – ⭐⭐⭐⭐⭐</p>
+    <p>“Loved the imported collection 😍” – ⭐⭐⭐⭐</p>
+    <p>“Fast delivery and sweet staff!” – ⭐⭐⭐⭐⭐</p>
+  </div>
+
+  <div class="contact">
+    <h2>📞 Contact Us</h2>
+    <form action="mailto:thriftyneon@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div class="lang-toggle">
+    <button onclick="toggleLang()">Switch to Malayalam</button>
+  </div>
+
+  <div class="join">
+    <h2>👩 Join Our Team</h2>
+    <form action="mailto:thriftyneon@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <select name="position">
+        <option value="">Choose Position</option>
+        <option>Sales Assistant</option>
+        <option>Manager</option>
+        <option>Social Media Handler</option>
+      </select>
+      <textarea name="why" rows="3" placeholder="Why do you want to join?"></textarea>
+      <button type="submit">Apply</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Thrifty Neon | Instagram: @thrifty_neon | Call: +91 90374 94792
+  </footer>
+
+  <script>
+    function toggleLang() {
+      alert("🌐 Language switching coming soon! Currently only English available.");
+    }
+  </script>
 
 </body>
 </html>
