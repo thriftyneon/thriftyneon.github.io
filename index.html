@@ -1,31 +1,92 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thrifty Neon</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #fff9f5;
-      color: #3e1f1f;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f4ef;
+      color: #5a2a1e;
       text-align: center;
-      padding: 40px;
+      padding: 2rem;
     }
     h1 {
-      color: #a83232;
+      color: #992828;
+      margin-bottom: 0.3rem;
     }
-    .info {
-      margin-top: 20px;
+    p {
+      margin: 0.5rem 0;
+    }
+    .icon {
+      margin-right: 0.4rem;
+    }
+    a {
+      color: #7d2d2d;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn {
+      background-color: #992828;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      margin: 1rem 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .btn:hover {
+      background-color: #7a1f1f;
+    }
+    .contact-links {
+      margin-top: 1rem;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      .btn {
+        padding: 0.5rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <h1>Welcome to Thrifty Neon!</h1>
-  <p>Kerala’s favorite thrift and imported surplus store 👗</p>
-  <div class="info">
-    <p>📍 Palace Rd, Mankada, Kerala – 679324</p>
-    <p>📞 +91 90374 94792</p>
-    <p>📸 Instagram: <a href="https://instagram.com/thrifty_neon" target="_blank">@thrifty_neon</a></p>
+  <p><em>Kerala’s favorite thrift and imported surplus store 👗</em></p>
+
+  <p>📍 Palace Rd, Mankada, Kerala – 679324</p>
+  <p>📞 <a href="tel:+919037494792">+91 90374 94792</a></p>
+  <p>📸 Instagram: <a href="https://www.instagram.com/thrifty_neon" target="_blank">@thrifty_neon</a></p>
+
+  <div class="contact-links">
+    <a href="tel:+919037494792"><button class="btn">Call Now</button></a>
+    <a href="https://wa.me/919037494792" target="_blank"><button class="btn">WhatsApp</button></a>
+    <a href="https://www.instagram.com/thrifty_neon" target="_blank"><button class="btn">Visit Instagram</button></a>
   </div>
+
+  <div class="gallery">
+    <img src="https://source.unsplash.com/featured/?fashion" alt="Thrift Product 1">
+    <img src="https://source.unsplash.com/featured/?clothing" alt="Thrift Product 2">
+    <img src="https://source.unsplash.com/featured/?vintage" alt="Thrift Product 3">
+  </div>
+
 </body>
 </html>
